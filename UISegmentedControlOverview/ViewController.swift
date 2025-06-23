@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var slider: UISlider!
     
+    @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var textField: UITextField!
     
     override func viewDidLoad() {
@@ -20,7 +21,7 @@ class ViewController: UIViewController {
         
         slider.value = 1
         
-        label.text = String(format: "%.0f", slider.value)
+        label.text = String(format: "%.2f", slider.value)
         label.font = label.font.withSize(35)
         label.textAlignment = .center
         label.numberOfLines = 2
@@ -30,6 +31,8 @@ class ViewController: UIViewController {
         slider.minimumValue = 0
         slider.maximumValue = 1
         slider.minimumTrackTintColor = .cyan
+        
+        datePicker.locale = Locale(identifier: "ru_RU")
     }
     
     
@@ -66,6 +69,17 @@ class ViewController: UIViewController {
         
         label.text = textField.text
         textField.text = ""
+    }
+    
+    
+    @IBAction func pickerAction(_ sender: UIDatePicker) {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        dateFormatter.locale = Locale(identifier: "ru_RU")
+        
+        let date = dateFormatter.string(from: sender.date)
+        
+        label.text = date
     }
     
     private func handleTextField() -> Bool {

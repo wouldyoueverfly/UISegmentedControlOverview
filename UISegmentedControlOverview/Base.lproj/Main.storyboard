@@ -58,20 +58,29 @@
                                             <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Hd-7L-Tto"/>
                                         </connections>
                                     </button>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="8yG-73-XFr">
+                                        <rect key="frame" x="0.0" y="530" width="348" height="148"/>
+                                        <connections>
+                                            <action selector="pickerAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="Xxv-gq-frk"/>
+                                        </connections>
+                                    </datePicker>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="KO1-YK-0ly" firstAttribute="trailing" secondItem="nDv-Md-yxI" secondAttribute="trailing" id="EUX-AJ-gW0"/>
                                     <constraint firstItem="KO1-YK-0ly" firstAttribute="top" secondItem="UGo-QC-hEW" secondAttribute="bottom" constant="100.66666666666666" id="Ft4-aX-8Kc"/>
                                     <constraint firstItem="Mk2-aB-Mwi" firstAttribute="trailing" secondItem="UGo-QC-hEW" secondAttribute="trailing" id="KGG-WJ-X1s"/>
                                     <constraint firstItem="nDv-Md-yxI" firstAttribute="leading" secondItem="TrD-H0-Xpf" secondAttribute="leading" id="KvW-Li-U00"/>
-                                    <constraint firstItem="8TS-lP-7WT" firstAttribute="bottom" secondItem="TrD-H0-Xpf" secondAttribute="bottom" constant="305" id="PeB-eO-ii5"/>
+                                    <constraint firstItem="8yG-73-XFr" firstAttribute="top" secondItem="TrD-H0-Xpf" secondAttribute="bottom" constant="119" id="TT8-2I-Pg4"/>
                                     <constraint firstAttribute="trailing" secondItem="Mk2-aB-Mwi" secondAttribute="trailing" constant="19" id="Tpy-Ue-DTI"/>
                                     <constraint firstItem="nDv-Md-yxI" firstAttribute="trailing" secondItem="TrD-H0-Xpf" secondAttribute="trailing" id="TsD-QE-8dz"/>
                                     <constraint firstItem="UGo-QC-hEW" firstAttribute="top" secondItem="Mk2-aB-Mwi" secondAttribute="bottom" constant="44" id="Ubu-ok-Kya"/>
                                     <constraint firstItem="Mk2-aB-Mwi" firstAttribute="top" secondItem="8TS-lP-7WT" secondAttribute="top" constant="20" id="XZz-gF-IgH"/>
                                     <constraint firstItem="TrD-H0-Xpf" firstAttribute="top" secondItem="nDv-Md-yxI" secondAttribute="bottom" constant="31" id="Xzo-q0-OQp"/>
-                                    <constraint firstAttribute="bottom" secondItem="TrD-H0-Xpf" secondAttribute="bottom" constant="305" id="ZKd-P1-2Bb"/>
+                                    <constraint firstAttribute="trailing" secondItem="8yG-73-XFr" secondAttribute="trailing" id="ZA5-ZL-PuI"/>
                                     <constraint firstItem="UGo-QC-hEW" firstAttribute="trailing" secondItem="KO1-YK-0ly" secondAttribute="trailing" id="ajE-0Q-IRW"/>
+                                    <constraint firstItem="8TS-lP-7WT" firstAttribute="bottom" secondItem="8yG-73-XFr" secondAttribute="bottom" constant="38" id="bHA-0m-eWc"/>
+                                    <constraint firstItem="8yG-73-XFr" firstAttribute="leading" secondItem="gj8-QC-P3t" secondAttribute="leading" id="bi9-AK-pj0"/>
+                                    <constraint firstAttribute="bottom" secondItem="8yG-73-XFr" secondAttribute="bottom" constant="38" id="eUE-UR-brj"/>
                                     <constraint firstItem="nDv-Md-yxI" firstAttribute="top" secondItem="KO1-YK-0ly" secondAttribute="bottom" constant="65" id="fTa-nl-9mG"/>
                                     <constraint firstItem="UGo-QC-hEW" firstAttribute="leading" secondItem="KO1-YK-0ly" secondAttribute="leading" id="faN-Qo-WfJ"/>
                                     <constraint firstItem="Mk2-aB-Mwi" firstAttribute="centerX" secondItem="gj8-QC-P3t" secondAttribute="centerX" id="qJd-uK-5rn"/>
@@ -86,12 +95,14 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstAttribute="bottomMargin" secondItem="gj8-QC-P3t" secondAttribute="bottom" constant="-30" id="K9h-xc-ejJ"/>
                             <constraint firstItem="gj8-QC-P3t" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-20" id="fVa-4k-2rD"/>
                             <constraint firstItem="gj8-QC-P3t" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="22" id="k8f-lQ-aru"/>
                             <constraint firstItem="gj8-QC-P3t" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lnF-H9-DcK"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="datePicker" destination="8yG-73-XFr" id="2G3-8H-4cB"/>
                         <outlet property="label" destination="UGo-QC-hEW" id="wH3-4d-irg"/>
                         <outlet property="segmentedControl" destination="Mk2-aB-Mwi" id="4oQ-CJ-KAl"/>
                         <outlet property="slider" destination="KO1-YK-0ly" id="XeE-dm-2jA"/>
