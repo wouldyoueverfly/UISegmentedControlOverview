@@ -42,6 +42,19 @@
                                     <action selector="sliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="6mW-du-bt9"/>
                                 </connections>
                             </slider>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="Enter your name" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="nDv-Md-yxI">
+                                <rect key="frame" x="42" y="409" width="308" height="34"/>
+                                <attributedString key="attributedText"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TrD-H0-Xpf">
+                                <rect key="frame" x="42" y="474" width="308" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Done"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Hd-7L-Tto"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -49,18 +62,25 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KO1-YK-0ly" secondAttribute="trailing" constant="43" id="BF8-2g-MlD"/>
                             <constraint firstItem="KO1-YK-0ly" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="42" id="F1t-vE-PzF"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Mk2-aB-Mwi" secondAttribute="trailing" constant="43" id="HQg-bk-wOG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nDv-Md-yxI" secondAttribute="trailing" constant="43" id="Kfa-fT-hk1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TrD-H0-Xpf" secondAttribute="trailing" constant="43" id="NCX-7a-y43"/>
                             <constraint firstItem="UGo-QC-hEW" firstAttribute="top" secondItem="Mk2-aB-Mwi" secondAttribute="bottom" constant="44" id="TbK-1V-iKD"/>
                             <constraint firstItem="KO1-YK-0ly" firstAttribute="top" secondItem="UGo-QC-hEW" secondAttribute="bottom" constant="100.66666666666666" id="Ueu-aI-JXg"/>
+                            <constraint firstItem="TrD-H0-Xpf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="42" id="X8h-EC-kDQ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UGo-QC-hEW" secondAttribute="trailing" constant="43" id="YQV-w5-IkL"/>
                             <constraint firstItem="UGo-QC-hEW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="42" id="ZbA-NA-bz4"/>
                             <constraint firstItem="Mk2-aB-Mwi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="42" id="fsa-uu-Yiz"/>
+                            <constraint firstItem="nDv-Md-yxI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="42" id="lq9-ab-Xmj"/>
+                            <constraint firstItem="TrD-H0-Xpf" firstAttribute="top" secondItem="nDv-Md-yxI" secondAttribute="bottom" constant="31" id="ouo-C4-rXk"/>
                             <constraint firstItem="Mk2-aB-Mwi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="qav-69-jPX"/>
+                            <constraint firstItem="nDv-Md-yxI" firstAttribute="top" secondItem="KO1-YK-0ly" secondAttribute="bottom" constant="65" id="wvK-Ba-Drj"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="label" destination="UGo-QC-hEW" id="wH3-4d-irg"/>
                         <outlet property="segmentedControl" destination="Mk2-aB-Mwi" id="4oQ-CJ-KAl"/>
                         <outlet property="slider" destination="KO1-YK-0ly" id="XeE-dm-2jA"/>
+                        <outlet property="textField" destination="nDv-Md-yxI" id="fyx-au-4bn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

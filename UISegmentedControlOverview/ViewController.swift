@@ -8,14 +8,18 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var label: UILabel!
-    
     @IBOutlet weak var slider: UISlider!
+    
+    @IBOutlet weak var textField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        slider.value = 1
+        
         label.text = String(format: "%.0f", slider.value)
         label.font = label.font.withSize(35)
         label.textAlignment = .center
@@ -27,8 +31,8 @@ class ViewController: UIViewController {
         slider.maximumValue = 1
         slider.minimumTrackTintColor = .cyan
     }
-
-
+    
+    
     @IBAction func segmentAction(_ sender: Any) {
         
         label.isHidden = false
@@ -54,6 +58,28 @@ class ViewController: UIViewController {
         
         let backgroundColor = self.view.backgroundColor
         self.view.backgroundColor = backgroundColor?.withAlphaComponent(CGFloat(sender.value))
+    }
+    
+    
+    @IBAction func buttonPressed(_ sender: Any) {
+        guard handleTextField() else { return }
+        
+        label.text = textField.text
+        textField.text = ""
+    }
+    
+    private func handleTextField() -> Bool {
+        guard textField.text?.isEmpty == false else { return false }
+        
+        if textField.text?.contains(where: { !$0.isLetter }) ?? false == true {
+            let alert = UIAlertController(title: "Wrong format", message: "Please enter your name", preferredStyle: .alert)
+            let buttonAction = UIAlertAction(title: "OK", style: .default)
+            
+            alert.addAction(buttonAction)
+            present(alert, animated: true)
+            return false
+        }
+        return true
     }
 }
 
